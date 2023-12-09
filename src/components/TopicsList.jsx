@@ -26,16 +26,16 @@ export default async function TopicsList() {
       {topics.map((t) => (
         <section
           key={t._id}
-          className="flex justify-between items-start gap-5 p-4 my-3 border border-slate-300"
+          className="flex justify-between items-center gap-5 p-4 my-3 border border-slate-300"
         >
           {/* topic header */}
           <div>
-            <h2 className="text-2xl font-bold">{t.title}</h2>
-            <div>{t.description}</div>
+            <h2 className="text-lg md:text-2xl font-bold">{t.title}</h2>
+            <div className="text-base md:text-lg">{t.description}</div>
           </div>
 
           {/* topic buttons */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 ">
             <Link className="hover:text-slate-600" href={`/editTopic/${t._id}`}>
               <HiPencilAlt size={24} />
             </Link>
